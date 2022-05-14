@@ -27,11 +27,18 @@ html {
     
 }
 
-.mem-title {
+.slide-title {
     width: 60%;
     height: 30%;
     background-color: bisque;
+    display: flex;
 }
+
+.slide-title-item {
+    opacity: 0;
+}
+
+
 
 .controls {
     width: 40%;
@@ -92,8 +99,8 @@ label {
  
  #slide-two:checked ~ .slider .slide-two-content,
  #slide-two:checked ~ .slider .slide-one-content,
- #slide-two:checked ~  .slider .slide-three-content,
- #slide-two:checked ~  .slider .slide-four-content {
+ #slide-two:checked ~ .slider .slide-three-content,
+ #slide-two:checked ~ .slider .slide-four-content {
     transform: translateX(-100%);
     transition: 1s;
 }
@@ -119,3 +126,29 @@ label {
 
 
 
+
+
+
+#slide-two:checked ~ .slide-title .slide-two-title {
+    opacity: 1;
+    order: -1;
+    transition: opacity 2s;
+}
+
+#slide-one:checked ~ .slide-title .slide-one-title {
+    opacity: 1;
+    order: -1;
+    transition: opacity 2s;
+}
+
+#slide-three:checked ~ .slide-title .slide-three-title {
+    opacity: 1;
+    order: -1;
+    transition: opacity 2s;
+}
+
+#slide-four:checked ~ .slide-title .slide-four-title {
+    opacity: 1;
+    order: -1;
+    transition: opacity 2s;
+}
